@@ -27,6 +27,8 @@ function Component() {
   const isLoggedIn = true;
   const fullName = "Hasan Said SERTKAYA";
 
+  //Props nedir? Özellik anlamına geliyor. Bir componenti ilk kez render ederken, onun görünümünü sağlayacak olan bilgileri vermek.
+
   return (
     //Tek div kullanılır. <> </> fragment tagınıda kullanabiliriz. <> == <React.Fragment>
     <React.Fragment>
