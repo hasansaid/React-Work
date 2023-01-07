@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/header.jsx';
+import Header from './components/header/header.jsx';
 
 function App () {
   return (
