@@ -1,21 +1,18 @@
 import React from 'react';
-import Header from './components/header/header.jsx';
+import Header from './components/header.jsx';
+import Login from './components/login.jsx';
 
 function App () {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   const fullName = 'Hasan Said SERTKAYA';
 
   return (
     <div>
-      <Header />
-      Merhaba &nbsp;
+      {/* Merhaba &nbsp; */}
 
       {isLoggedIn
-        ? <div>Hoşgeldin {fullName}</div>
-        : <button>
-            'Lütfen Giriş Yapınız !!!'
-          </button>}
-
+        ? <div> <Header /> <hr /> Hoşgeldin {fullName} </div>
+        : <Login />}
     </div>
   );
 }
