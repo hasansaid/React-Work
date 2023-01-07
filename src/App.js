@@ -25,7 +25,11 @@ function App () {
       <User name="Hasan" surname="SERTKAYA" age={23} />
       <User name="Said" surname="SERTKAYA" age={25} /> */}
 
-      <User data={user} friends={['Ali ', 'Ayşe ', 'Murat']} />
+      <User
+        // title="Kişiler"
+        data={user}
+        friends={['Ali ', 'Ayşe ', 'Murat']}
+      />
     </div>
   );
 }

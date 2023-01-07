@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-function User({ data, friends }) {
+function User({ title, data, friends }) {
   // console.log(friends);
   //Farklı kulanımlar..
   // const data = props.data;
   // const {data}=props;
   //   const {firstname,lastname,email} = props.data;
   return (
-    <div>
+    <div style={{ margin: "50px 0px 0px 50px" }}>
       {/* <table>
         <tr>
           <td>Name: {props.name}</td>
@@ -47,7 +47,7 @@ function User({ data, friends }) {
       </table>
       <div></div>
       <hr /> */}
-
+      <strong>{title}</strong>
       <p>First Name: {data.firstname}</p>
       <p>Last Name: {data.lastname}</p>
       <p>Email: {data.email}</p>
@@ -57,12 +57,18 @@ function User({ data, friends }) {
 }
 
 User.propTypes = {
+  //title burada tanımlamayınca çalışmadı..
+  title: PropTypes.string,
   data: PropTypes.exact({
     firstname: PropTypes.string,
     lastname: PropTypes.string,
     email: PropTypes.string,
   }),
   friends: PropTypes.array,
+};
+
+User.defaultProps = {
+  title: "Kişi",
 };
 
 export default User;
