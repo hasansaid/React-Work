@@ -18,15 +18,26 @@ function Component() {
   // Yukarıda kullanılan return'lar aynı işlevi görmektedir. İkinci return kullanımı jsx ile hayatımıza girip bizi karmaşadan kurtardı.
   //-------------------------------------------------------------------------------------------------------------------------------------------
 
-  //Componentlerde değişken render etme.
+  //Componentlerde değişken render etme...
 
   const yazı = "Merhabalar....";
+
+  //Koşullu render işlemi..
+
+  const isLoggedIn = true;
+  const fullName = "Hasan Said SERTKAYA";
 
   return (
     //Tek div kullanılır. <> </> fragment tagınıda kullanabiliriz. <> == <React.Fragment>
     <React.Fragment>
       <>
         {yazı}
+        {/* Birinci kullanım:  */}
+        {isLoggedIn ? "Hoşgeldiniz " + fullName : "Lütfen Giriş Yapınız !!!"}
+        {/* İkinci kullanım: */}
+        {isLoggedIn && <div>Hoşgeldiniz {fullName}</div>}
+        {!isLoggedIn && <a href="">Giriş Yapınız</a>}
+
         <div className="test">
           <h1>Başlık</h1>
           <label htmlFor="test"></label>
