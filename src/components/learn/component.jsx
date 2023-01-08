@@ -32,6 +32,8 @@ function Component() {
   //State nedir? Durum anlamına gelmektedir. Componentin durumundan bahsediyoruz. Elimizdeki veriye bağlı olarak görüntü değişebilir.
   //Previous State Tanımı: Bir state'e atama yaparken kullanılabilecek olan callback methodu hakkında bilgi verilmektedir. Kullanımı onClick={()=> setCount(prev=> prev + amout)}
   //=== ifadesi hem tip hem değer kontrolü yapar.
+  //Async/Await anahtar sözcükleri ile asenkron işlemleri sıraya koyar.
+
   return (
     //Tek div kullanılır. <> </> fragment tagınıda kullanabiliriz. <> == <React.Fragment>
     <React.Fragment>
