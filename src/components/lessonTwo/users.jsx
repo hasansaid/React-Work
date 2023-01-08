@@ -4,6 +4,7 @@ import { async } from "q";
 
 const Users = () => {
   //Fetch fonksiyonu kullanılarak veri çekme işlemi yapılmaktadır.
+  //Anonim fonksiyon kullanılarakta yapılabilir.
 
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
@@ -21,16 +22,20 @@ const Users = () => {
   }, []);
 
   const getData = async () => {
-    const { data: users } = await axios(
-      "https://jsonplaceholder.typicode.com/users"
-    );
-    const { data: posts } = await axios(
-      `https://jsonplaceholder.typicode.com/posts?userId=${users[0].id}`
-    );
+    try {
+      const { data: users } = await axios(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+      const { data: posts } = await axios(
+        `https://jsonplaceholder.typicode.com/posts?userId=${users[0].id}`
+      );
 
-    setUsers(users);
-    setPosts(posts);
-    setLoding(false);
+      setUsers(users);
+      setPosts(posts);
+      setLoding(false);
+    } catch (error) {
+      console.log("error", error);
+    }
   };
 
   return (
