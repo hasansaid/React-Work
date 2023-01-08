@@ -1,7 +1,9 @@
 import React from 'react';
+// import Counter from './components/counter.jsx';
 // import Header from './components/header.jsx';
 // import Login from './components/login.jsx';
-import User from './components/user.jsx';
+// import User from './components/user.jsx';
+import UserState from './components/userState.jsx';
 
 function App () {
   // const isLoggedIn = true;
@@ -25,11 +27,15 @@ function App () {
       <User name="Hasan" surname="SERTKAYA" age={23} />
       <User name="Said" surname="SERTKAYA" age={25} /> */}
 
-      <User
+      {/* <User
         // title="Kişiler"
         data={user}
         friends={['Ali ', 'Ayşe ', 'Murat']}
-      />
+      /> */}
+
+      {/* <Counter /> */}
+
+      <UserState />
     </div>
   );
 }
