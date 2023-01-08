@@ -30,7 +30,8 @@ function Component() {
   //Props nedir? Özellik anlamına geliyor. Bir componenti ilk kez render ederken, onun görünümünü sağlayacak olan bilgileri vermek.
   //PropTypes  import PropTypes from "prop-types"; komutu ile component'e import edilir. Sıkça kullanmamız gerekecek.TypeScript kullanmadığımız için bu özellik ile tip güvenliğini sağlıyoruz.
   //State nedir? Durum anlamına gelmektedir. Componentin durumundan bahsediyoruz. Elimizdeki veriye bağlı olarak görüntü değişebilir.
-
+  //Previous State Tanımı: Bir state'e atama yaparken kullanılabilecek olan callback methodu hakkında bilgi verilmektedir. Kullanımı onClick={()=> setCount(prev=> prev + amout)}
+  //=== ifadesi hem tip hem değer kontrolü yapar.
   return (
     //Tek div kullanılır. <> </> fragment tagınıda kullanabiliriz. <> == <React.Fragment>
     <React.Fragment>

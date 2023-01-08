@@ -1,4 +1,6 @@
 import React from 'react';
+import Color from './components/color.jsx';
+import Form from './components/form.jsx';
 // import Counter from './components/counter.jsx';
 // import Header from './components/header.jsx';
 // import Login from './components/login.jsx';
@@ -35,7 +37,11 @@ function App () {
 
       {/* <Counter /> */}
 
-      <UserState />
+      {/* <UserState /> */}
+
+      {/* <Color /> */}
+
+      <Form />
     </div>
   );
 }
