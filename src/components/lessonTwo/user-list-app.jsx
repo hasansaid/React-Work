@@ -8,7 +8,12 @@ const UserListApp = () => {
   return (
     <div className="App">
       <div>
-        <p> User id : {activeUserId}</p>
+        <p>
+          {" "}
+          User id : {activeUserId}{" "}
+          <button onClick={() => setActiveUserId(false)}>Id sil</button>
+        </p>
+
         <UserList setActiveUserId={setActiveUserId} />
       </div>
       {activeUserId && (

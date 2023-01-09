@@ -15,3 +15,15 @@
   cursor: pointer;
   color: rgb(255, 0, 0);
 }
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.menu {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  padding: 10px 0;
+  column-gap: 10px;
+}
