@@ -12,10 +12,11 @@ import {
   Routes,
 } from 'react-router-dom';
 
-import Home from './components/lessonTwo/home';
-import UsersTwo from './components/lessonTwo/usersTwo';
-import Menu from './components/lessonTwo/menu';
-import Contact from './components/lessonTwo/contact';
+import Home from './components/lessonTwo/miniproject/home';
+import UsersTwo from './components/lessonTwo/miniproject/usersTwo';
+import Menu from './components/lessonTwo/miniproject/menu';
+import Contact from './components/lessonTwo/miniproject/contact';
+import UserDetail from './components/lessonTwo/miniproject/userDetail';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
       <Routes>
         <Route index element={<Home />} />
         <Route path="users-two" element={<UsersTwo />} />
+        <Route path="users-two/:id" element={<UserDetail />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>

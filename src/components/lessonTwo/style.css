@@ -27,3 +27,8 @@ li {
   padding: 10px 0;
   column-gap: 10px;
 }
+
+.userTwo li:hover {
+  cursor: pointer;
+  color: rgb(255, 0, 0);
+}

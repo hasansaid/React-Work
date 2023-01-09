@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
-const UserDetail = ({ activeUserId }) => {
+const UsersDetail = ({ activeUserId }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -18,4 +18,4 @@ const UserDetail = ({ activeUserId }) => {
   );
 };
 
-export default UserDetail;
+export default UsersDetail;
