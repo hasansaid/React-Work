@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 
 const UserDetail = () => {
   const { id } = useParams();
-  const next = id + 1;
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -18,7 +17,7 @@ const UserDetail = () => {
     <div>
       <h2>Kullanıcı Detayları</h2>
       <pre>{JSON.stringify(user, null, 2)}</pre>
-      <Link to={`/${id + 1}`}>Sonraki Kullanıcı</Link>
+      <Link to={`/users-two/${Number(id) + 1}`}>Sonraki Kullanıcı</Link>
     </div>
   );
 };
