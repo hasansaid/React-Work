@@ -17,16 +17,23 @@ import UsersTwo from './components/lessonTwo/miniproject/usersTwo';
 import Menu from './components/lessonTwo/miniproject/menu';
 import Contact from './components/lessonTwo/miniproject/contact';
 import UserDetail from './components/lessonTwo/miniproject/userDetail';
+import Login from './components/lessonTwo/miniproject/login';
+import Dashboard from './components/lessonTwo/layouts/dashboard';
+import Auth from './components/lessonTwo/layouts/auth';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Menu />
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="users-two" element={<UsersTwo />} />
-        <Route path="users-two/:id" element={<UserDetail />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="/" element={<Dashboard />}>
+          <Route index element={<Home />} />
+          <Route path="users-two" element={<UsersTwo />} />
+          <Route path="users-two/:id" element={<UserDetail />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+        <Route path="auth" element={<Auth />}>
+          <Route index element={<Login />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
