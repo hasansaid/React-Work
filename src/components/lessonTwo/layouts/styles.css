@@ -8,4 +8,9 @@
 
 .auth-menu {
   display: flex;
+  column-gap: 10px;
+}
+
+.auth-menu a {
+  text-decoration: none;
 }

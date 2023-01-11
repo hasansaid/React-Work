@@ -20,6 +20,8 @@ import UserDetail from './components/lessonTwo/miniproject/userDetail';
 import Login from './components/lessonTwo/miniproject/login';
 import Dashboard from './components/lessonTwo/layouts/dashboard';
 import Auth from './components/lessonTwo/layouts/auth';
+import Register from './components/lessonTwo/miniproject/register';
+import Error from './components/lessonTwo/miniproject/error404';
 
 const App = () => {
   return (
@@ -31,9 +33,13 @@ const App = () => {
           <Route path="users-two/:id" element={<UserDetail />} />
           <Route path="contact" element={<Contact />} />
         </Route>
+
         <Route path="auth" element={<Auth />}>
           <Route index element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Route>
+        <Route path="*" element={<Error />} />
+
       </Routes>
     </BrowserRouter>
   );

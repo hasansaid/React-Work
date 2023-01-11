@@ -6,10 +6,12 @@ const Auth = () => {
   return (
     <div className="auth-container">
       Auth
-      <div id="auth-menu">
+      <div className="auth-menu">
         <Link to="/auth">Giriş Yap</Link>
         <Link to="/auth/register">Kayıt Ol</Link>
       </div>
+      <hr />
+      <Outlet />
     </div>
   );
 };
