@@ -1,7 +1,109 @@
 import React from "react";
-
+import { Formik, Field, Form } from "formik";
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <div>
+      Contact
+      <Formik
+        initialValues={{
+          firstName: "",
+          lastName: "",
+          message: "",
+          email: "",
+        }}
+        onSubmit={async (values) => {
+          console.log(values);
+        }}
+      >
+        {({ handleSubmit, handleChange }) => (
+          <Form
+            onSubmit={handleSubmit}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              padding: "10px",
+            }}
+          >
+            <label style={{ margin: "5px" }} htmlFor="firstName">
+              First Name:{" "}
+            </label>
+            <input
+              style={{ margin: "5px" }}
+              id="firstName"
+              name="firstName"
+              placeholder="Mehmet"
+              onChange={handleChange("firstName")}
+            />
+
+            <label style={{ margin: "5px" }} htmlFor="lastName">
+              Last Name:{" "}
+            </label>
+            <input
+              style={{ margin: "5px" }}
+              id="lastName"
+              name="lastName"
+              placeholder="Çırpıcı"
+              onChange={handleChange("lastName")}
+            />
+
+            <label style={{ margin: "5px" }} htmlFor="message">
+              Message:{" "}
+            </label>
+            <input
+              style={{ margin: "5px" }}
+              id="message"
+              name="message"
+              placeholder="Mesajınızı giriniz.."
+              onChange={handleChange("message")}
+            />
+
+            <label style={{ margin: "5px" }} htmlFor="email">
+              Email:{" "}
+            </label>
+            <input
+              style={{ margin: "5px" }}
+              id="email"
+              name="email"
+              placeholder="mc@acme.com"
+              type="email"
+              onChange={handleChange("email")}
+            />
+            <button style={{ margin: "5px" }} type="submit">
+              Submit
+            </button>
+          </Form>
+        )}
+      </Formik>
+      {/* <Formik
+        initialValues={{
+          firstName: "",
+          lastName: "",
+          email: "",
+        }}
+        onSubmit={async (values) => {
+          await new Promise((r) => setTimeout(r, 500));
+          alert(JSON.stringify(values, null, 2));
+        }}
+      >
+        <Form>
+          <label htmlFor="firstName">First Name</label>
+          <Field id="firstName" name="firstName" placeholder="Jane" />
+
+          <label htmlFor="lastName">Last Name</label>
+          <Field id="lastName" name="lastName" placeholder="Doe" />
+
+          <label htmlFor="email">Email</label>
+          <Field
+            id="email"
+            name="email"
+            placeholder="jane@acme.com"
+            type="email"
+          />
+          <button type="submit">Submit</button>
+        </Form>
+      </Formik> */}
+    </div>
+  );
 };
 
 export default Contact;
