@@ -1,7 +1,4 @@
 import React from 'react';
-import Main from './components/lessonOne/main';
-import UserListApp from './components/lessonTwo/user-list-app';
-import Users from './components/lessonTwo/users';
 
 import {
   createBrowserRouter,
@@ -14,7 +11,7 @@ import {
 
 import Home from './components/lessonTwo/miniproject/home';
 import UsersTwo from './components/lessonTwo/miniproject/usersTwo';
-import Menu from './components/lessonTwo/miniproject/menu';
+
 import Contact from './components/lessonTwo/miniproject/contact';
 import UserDetail from './components/lessonTwo/miniproject/userDetail';
 import Login from './components/lessonTwo/miniproject/login';

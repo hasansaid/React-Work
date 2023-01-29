@@ -15,7 +15,7 @@ const Contact = () => {
           console.log(values);
         }}
       >
-        {({ handleSubmit, handleChange }) => (
+        {({ handleSubmit, handleChange, values }) => (
           <Form
             onSubmit={handleSubmit}
             style={{
@@ -32,6 +32,7 @@ const Contact = () => {
               id="firstName"
               name="firstName"
               placeholder="Mehmet"
+              value={values.firstName}
               onChange={handleChange("firstName")}
             />
 
@@ -43,6 +44,7 @@ const Contact = () => {
               id="lastName"
               name="lastName"
               placeholder="Çırpıcı"
+              value={values.lastName}
               onChange={handleChange("lastName")}
             />
 
@@ -54,6 +56,7 @@ const Contact = () => {
               id="message"
               name="message"
               placeholder="Mesajınızı giriniz.."
+              value={values.message}
               onChange={handleChange("message")}
             />
 
@@ -66,6 +69,7 @@ const Contact = () => {
               name="email"
               placeholder="mc@acme.com"
               type="email"
+              value={values.email}
               onChange={handleChange("email")}
             />
             <button style={{ margin: "5px" }} type="submit">
