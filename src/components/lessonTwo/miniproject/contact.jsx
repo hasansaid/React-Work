@@ -11,11 +11,13 @@ const Contact = () => {
           message: "",
           email: "",
         }}
-        onSubmit={async (values) => {
+        onSubmit={async (values, bag) => {
+          await new Promise((r) => setTimeout(r, 1000));
           console.log(values);
+          bag.resetForm();
         }}
       >
-        {({ handleSubmit, handleChange, values }) => (
+        {({ handleSubmit, handleChange, values, isSubmitting }) => (
           <Form
             onSubmit={handleSubmit}
             style={{
@@ -28,10 +30,11 @@ const Contact = () => {
               First Name:{" "}
             </label>
             <input
+              disabled={isSubmitting}
               style={{ margin: "5px" }}
               id="firstName"
               name="firstName"
-              placeholder="Mehmet"
+              // placeholder="Mehmet"
               value={values.firstName}
               onChange={handleChange("firstName")}
             />
@@ -40,10 +43,11 @@ const Contact = () => {
               Last Name:{" "}
             </label>
             <input
+              disabled={isSubmitting}
               style={{ margin: "5px" }}
               id="lastName"
               name="lastName"
-              placeholder="Çırpıcı"
+              // placeholder="Çırpıcı"
               value={values.lastName}
               onChange={handleChange("lastName")}
             />
@@ -52,10 +56,11 @@ const Contact = () => {
               Message:{" "}
             </label>
             <input
+              disabled={isSubmitting}
               style={{ margin: "5px" }}
               id="message"
               name="message"
-              placeholder="Mesajınızı giriniz.."
+              // placeholder="Mesajınızı giriniz.."
               value={values.message}
               onChange={handleChange("message")}
             />
@@ -64,15 +69,20 @@ const Contact = () => {
               Email:{" "}
             </label>
             <input
+              disabled={isSubmitting}
               style={{ margin: "5px" }}
               id="email"
               name="email"
-              placeholder="mc@acme.com"
+              // placeholder="mc@acme.com"
               type="email"
               value={values.email}
               onChange={handleChange("email")}
             />
-            <button style={{ margin: "5px" }} type="submit">
+            <button
+              style={{ margin: "5px" }}
+              type="submit"
+              disabled={isSubmitting}
+            >
               Submit
             </button>
           </Form>
