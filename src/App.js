@@ -1,13 +1,10 @@
 import React from 'react';
-import ReactStart from './components/reactStart/reactStart.jsx';
+import ReactStart from './components/reactStart/ReactStart.jsx';
 
 const App = () => {
   return (
     <div>
-
-      <ReactStart />
-      deneme
-
+      {/* <ReactStart /> */}
     </div>
   );
 };
