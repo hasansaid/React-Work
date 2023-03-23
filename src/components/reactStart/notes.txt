@@ -1,0 +1,1 @@
+props => Parent componentten child componente veri akış.
