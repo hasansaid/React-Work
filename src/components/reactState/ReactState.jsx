@@ -21,11 +21,9 @@ const ReactState = () => {
       {/* <button className="reactStateButton" onClick={handleClick}>
         Kurs Ekle
       </button> */}
-      <div className="rStateButton">
-        <button className="button-64" onClick={handleClick}>
-          <span className="text">Kurs Ekle</span>
-        </button>
-      </div>
+      <button className="button-64" onClick={handleClick}>
+        <span className="text">Kurs Ekle</span>
+      </button>
       <div className="rStateCourse">{courseList}</div>
     </div>
   );
