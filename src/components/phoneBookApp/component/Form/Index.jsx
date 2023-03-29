@@ -26,12 +26,12 @@ const Index = ({ addContact, contacts }) => {
   return (
     <div>
       <form style={{ width: "300px" }} onSubmit={onSubmit}>
-        <div class=" text-center d-flex flex-column mb-3">
-          <div class="p-2">
-            <div class=" input-group flex-nowrap">
+        <div className=" text-center d-flex flex-column mb-3">
+          <div className="p-2">
+            <div className=" input-group flex-nowrap">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 aria-label="Username"
                 aria-describedby="addon-wrapping"
                 name="fullname"
@@ -41,9 +41,9 @@ const Index = ({ addContact, contacts }) => {
               />
             </div>
           </div>
-          <div class="p-2">
+          <div className="p-2">
             <input
-              class="form-control"
+              className="form-control"
               aria-label="Username"
               aria-describedby="addon-wrapping"
               type="text"
@@ -53,7 +53,7 @@ const Index = ({ addContact, contacts }) => {
               onChange={onChangeInput}
             />
           </div>
-          <div class="p-2">
+          <div className="p-2">
             {" "}
             <div>
               <button className="btn btn-success">Add</button>

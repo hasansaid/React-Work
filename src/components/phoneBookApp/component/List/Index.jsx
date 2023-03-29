@@ -14,7 +14,7 @@ const Index = ({ contacts }) => {
   return (
     <div>
       <input
-        class="form-control"
+        className="form-control"
         aria-label="Username"
         aria-describedby="addon-wrapping"
         type="text"
@@ -23,10 +23,10 @@ const Index = ({ contacts }) => {
         onChange={(e) => setFilterText(e.target.value)}
       />
 
-      <div class="d-flex flex-column mb-3">
+      <div className="d-flex flex-column mb-3">
         {filtered.map((contact, index) => {
           return (
-            <div class="p-2" key={index}>
+            <div className="p-2" key={index}>
               {contact.fullname} {contact.phone_number}
             </div>
           );

@@ -22,13 +22,13 @@ const Contacts = () => {
     console.log(contacts);
   }, [contacts]);
   return (
-    <div class="d-flex flex-column mb-3">
+    <div className="d-flex flex-column mb-3">
       <div className="mb-4 fs-2 fw-bold">CONTACT LIST APP</div>
-      <div class="p-2 d-flex justify-content-center w-300px">
+      <div className="p-2 d-flex justify-content-center w-300px">
         {" "}
         <List contacts={contacts} />
       </div>
-      <div class="p-2 d-flex justify-content-center">
+      <div className="p-2 d-flex justify-content-center">
         {" "}
         <Form addContact={setContacts} contacts={contacts} />
       </div>
