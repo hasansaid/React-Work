@@ -12,7 +12,13 @@ const Menu = () => {
           <Link to="about">Hakkında</Link>
         </li>
         <li>
+          <Link to="users">Kullanıcılar</Link>
+        </li>
+        <li>
           <Link to="app">Uygulama</Link>
+        </li>
+        <li>
+          <Link to="suggestions">Öneriler</Link>
         </li>
       </ul>
     </div>

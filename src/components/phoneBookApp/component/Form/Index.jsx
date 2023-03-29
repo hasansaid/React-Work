@@ -21,7 +21,7 @@ const Index = ({ addContact, contacts }) => {
 
     addContact([...contacts, form]);
     // setForm(initialFormValues);
-    console.log(form);
+    // console.log(form);
   };
   return (
     <div>

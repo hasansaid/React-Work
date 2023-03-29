@@ -19,7 +19,7 @@ const Contacts = () => {
   ]);
 
   useEffect(() => {
-    console.log(contacts);
+    // console.log(contacts);
   }, [contacts]);
   return (
     <div className="d-flex flex-column mb-3">
